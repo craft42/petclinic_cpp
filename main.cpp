@@ -1,5 +1,7 @@
 #include "DinosaurModel.h"
 #include "DinosaurView.h"
+#include "test_ThreeFunctions.h"
+#include "test_FromCsv.h"
 #include <iostream>
 
 int main() {
@@ -78,6 +80,18 @@ int main() {
             case 6: { // Add a Random Dinosaur
                 model.addRandomDinosaur();
                 std::cout << "Random Dinosaur added.\n";
+                break;
+            }
+            case 7: { // Run Simple Unit Tests
+                std::cout << "Running Simple Unit Tests...\n";
+                runSimpleTests();
+                std::cout << "Simple Unit Tests complete.\n";
+                break;
+            }
+            case 8: { // Run Unit Tests from CSV
+                std::cout << "Running Unit Tests from CSV...\n";
+                runCsvTests();
+                std::cout << "Unit Tests from CSV complete.\n";
                 break;
             }
             case 99: // Quit

@@ -25,6 +25,8 @@ void DinosaurView::showMenu() {
     std::cout << choice++ << ". Delete a Dinosaur (step 1.1)\n";
     std::cout << choice++ << ". Load from CSV (step 1.2)\n";
     std::cout << choice++ << ". Add a Random Dinosaur (for help)\n";
+    std::cout << choice++ << ". Run Simple Unit Tests (step 2.1)\n";
+    std::cout << choice++ << ". Run Unit Tests from CSV (step 2.2)\n";
 
     std::cout << "99. Quit\n";
 }

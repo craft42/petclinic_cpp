@@ -2,7 +2,7 @@
 #include <vector>
 #include <random>
 
-const std::vector<std::string> NAMES = {"Rex", "Spike", "Dino", "Trixie", "Thunder", "Rocky", "Titan", "Flash"};
+const std::vector<std::string> NAMES = {"Rex", "Spike", "Dino", "Trixie", "Thunder", "Rocky", "Titan"};
 const std::vector<std::string> SPECIES = {"Tyrannosaurus", "Velociraptor", "Triceratops", "Brachiosaurus", "Stegosaurus"};
 const std::vector<std::string> COUNTRIES = {"USA", "France", "Italy", "Brazil", "Germany", "India", "China", "Mexico", "Russia", "Japan"};
 std::random_device rd;

@@ -14,12 +14,9 @@ public:
     void loadFromCSV(const std::string& filename);
     bool predict(unsigned short int uid, int y) const;
 
-    // Step 1: Implement the following methods
-    // retrieve, update, delete a « dinosaur » object by uid
     bool retrieveDinosaur(unsigned short int uid, Dinosaur& dino) const;
     bool updateDinosaur(unsigned short int uid, const Dinosaur& newDino);
     bool deleteDinosaur(unsigned short int uid);
-
     std::vector<Dinosaur> getAllDinosaurs() const;
     void addRandomDinosaur();
 };
