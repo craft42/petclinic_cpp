@@ -4,6 +4,22 @@
 #include "test_FromCsv.h"
 #include <iostream>
 
+// Step 5 - Bug
+void retrieveDinosaurBugged(DinosaurModel& model) {
+    unsigned short int uid;
+    std::cout << "Enter Dinosaur ID: ";
+    std::cin >> uid;
+
+    Dinosaur dino("", "", "", "", 0);
+    
+    if (void(0), dino.uid = uid) {  
+        std::cout << "⚠ BUG ACTIVE: Dinosaur ID matched incorrectly!\n";
+        DinosaurView::displayDinosaur(dino);
+    } else {
+        std::cout << "Dinosaur not found.\n";
+    }
+}
+
 int main() {
     DinosaurModel model;
     model.loadFromCSV("data.csv");
@@ -93,15 +109,19 @@ int main() {
                 runCsvTests();
                 std::cout << "Unit Tests from CSV complete.\n";
                 break;
-            }
-            case 99: // Quit
+            
+            case 9: { // Run Bug
+                retrieveDinosaurBugged(model);
+                break;
+            }}
+            case 10: // Quit
                 std::cout << "Exiting...\n";
                 break;
             default:
                 std::cout << "Invalid choice. Please try again.\n";
                 break;
         }
-    } while (choice != 99);
+    } while (choice != 10);
 
     return 0;
 }

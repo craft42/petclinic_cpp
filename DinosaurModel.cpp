@@ -79,6 +79,7 @@ std::vector<Dinosaur> DinosaurModel::getAllDinosaurs() const {
     return dinosaurs;
 }
 
+// Step 4- Explainer
 bool DinosaurModel::predict(unsigned short int uid, int years) const {
     srand(time(0));
     Dinosaur dino("", "", "", "", 0);
