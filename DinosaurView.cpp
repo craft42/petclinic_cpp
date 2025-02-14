@@ -19,6 +19,7 @@ void DinosaurView::displayAllDinosaurs(const std::vector<Dinosaur>& dinos) {
 
 void DinosaurView::showMenu() {
     short unsigned int choice = 1;
+    std::cout << "\n\n*** Choose an option:\n";
     std::cout << choice++ << ". Show all Dinosaurs (for help)\n";
     std::cout << choice++ << ". Retrieve a Dinosaur (step 1.1)\n";
     std::cout << choice++ << ". Update a Dinosaur (step 1.1)\n";
