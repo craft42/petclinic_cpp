@@ -52,11 +52,16 @@ bool DinosaurModel::retrieveDinosaur(unsigned short int uid, Dinosaur& outDino) 
 bool DinosaurModel::updateDinosaur(unsigned short int uid, const Dinosaur& newDino) {
     for (auto& dino : dinosaurs) {
         if (dino.uid == uid) {
-            dino = newDino;
+            if (!newDino.name.empty()) dino.name = newDino.name;
+            if (!newDino.species.empty()) dino.species = newDino.species;
+            if (!newDino.sex.empty()) dino.sex = newDino.sex;
+            if (!newDino.country.empty()) dino.country = newDino.country;
+            if (newDino.scales > 0) dino.scales = newDino.scales; 
+
             return true;
         }
     }
-    return false;
+    return false; // UID non trouvé
 }
 
 bool DinosaurModel::deleteDinosaur(unsigned short int uid) {
@@ -74,6 +79,7 @@ std::vector<Dinosaur> DinosaurModel::getAllDinosaurs() const {
     return dinosaurs;
 }
 
+// Step 4- Explainer
 bool DinosaurModel::predict(unsigned short int uid, int years) const {
     srand(time(0));
     Dinosaur dino("", "", "", "", 0);
