@@ -114,7 +114,7 @@ int main() {
                 retrieveDinosaurBugged(model);
                 break;
             }}
-            case 10: // Quit
+            case 99: // Quit
                 std::cout << "Exiting...\n";
                 break;
             default:
