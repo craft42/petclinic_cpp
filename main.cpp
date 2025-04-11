@@ -121,7 +121,7 @@ int main() {
                 std::cout << "Invalid choice. Please try again.\n";
                 break;
         }
-    } while (choice != 10);
+    } while (choice != 99);
 
     return 0;
 }
